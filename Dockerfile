@@ -1,4 +1,4 @@
-FROM demo/oracle-java:8
+FROM openjdk:8-jdk-alpine
 
 LABEL maintainer="joostvherwaarden@hotmail.com"
 
