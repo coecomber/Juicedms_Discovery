@@ -10,7 +10,7 @@ A live test version for development purposes of this application can be found on
 
 &nbsp;
 
-* This application is part of multiple applications for my microservices project. The other repositories can be found on the following locations:
+This application is part of multiple applications for my microservices project. The other repositories can be found on the following locations:
 * **Discovery service:** https://github.com/coecomber/Juicedms_Discovery
 * **Character service:** https://github.com/coecomber/Juicedms_Character
 * **Friend service:** https://github.com/coecomber/Juicedms_Friend
