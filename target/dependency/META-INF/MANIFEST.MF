@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Created-By: Maven Archiver 3.4.0
 Build-Jdk-Spec: 11
 Implementation-Title: Discovery
-Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Version: 0.0.1
 Main-Class: org.springframework.boot.loader.JarLauncher
 Start-Class: com.Herwaarden.Discovery.DiscoveryApplication
 Spring-Boot-Version: 2.2.2.RELEASE
