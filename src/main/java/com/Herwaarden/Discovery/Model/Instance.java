@@ -1,6 +1,7 @@
 package com.Herwaarden.Discovery.Model;
 
 public class Instance {
+
     public String name;
     public String url;
     public int port;
