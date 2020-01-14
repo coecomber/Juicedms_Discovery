@@ -10,6 +10,7 @@ import com.netflix.eureka.registry.PeerAwareInstanceRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,9 +20,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/instance/")
 public class InstanceResource {
+    private int instanceIndex;
 
     @Autowired
     PeerAwareInstanceRegistry registry;
+
+    public InstanceResource(){
+        instanceIndex = 0;
+    }
 
     @GetMapping(value = "/get", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Instance> getInstances () {
@@ -45,4 +51,28 @@ public class InstanceResource {
 
         return instances;
     }
+
+    @GetMapping("/getByName/{service-name}")
+    public String getInstance(@PathVariable("service-name") String service)
+    {
+        try
+        {
+            List<InstanceInfo> instances = this.registry.getApplications().getRegisteredApplications(service).getInstancesAsIsFromEureka();
+            instanceIndex++;
+            if (instanceIndex >= instances.size())
+            {
+                instanceIndex = 0;
+            }
+
+            return instances.get(instanceIndex).getHomePageUrl();
+        }
+        catch (Exception e)
+        {
+        }
+
+        return null;
+    }
+
+
+
 }
