@@ -2,17 +2,12 @@ package com.Herwaarden.Discovery.Resource;
 
 import com.Herwaarden.Discovery.Model.Instance;
 import com.netflix.appinfo.InstanceInfo;
-import com.netflix.discovery.EurekaClient;
 import com.netflix.discovery.shared.Application;
 import com.netflix.discovery.shared.Applications;
-import com.netflix.eureka.EurekaServerContextHolder;
 import com.netflix.eureka.registry.PeerAwareInstanceRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +47,7 @@ public class InstanceResource {
         return instances;
     }
 
+    @CrossOrigin(origins = {"http://localhost:9000","http://217.101.44.31:9000"})
     @GetMapping("/getByName/{service-name}")
     public String getInstance(@PathVariable("service-name") String service)
     {

@@ -20,7 +20,12 @@ This application is part of multiple applications for my microservices project. 
 * **Party service:** https://github.com/coecomber/Juicedms_Party
 * **Monster service:** https://github.com/coecomber/Juicedms_Monster
 
+Other than the microservices there is also a websocket server (spring) and a vue.js application. These can be found on the following locations:
+* **Vue frontend:** https://github.com/coecomber/Juicedms_Discovery
+* **Spring websocket server:** https://github.com/coecomber/Juicedms_WebsocketServer
+
+
 &nbsp;
 
-These are all designed to work the design shown below. This project contains all the services shown in the green square.
-![Alt text](https://i.gyazo.com/b9ef1a53df8da2fc537f45af91791046.png "Microservices Design")
+These are all designed to work the design shown below.
+![Alt text](https://i.gyazo.com/7677acc8c462ca42a40f6f40f0ba4ab0.png "Microservices Design")
