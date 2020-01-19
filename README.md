@@ -21,7 +21,7 @@ This application is part of multiple applications for my microservices project. 
 * **Monster service:** https://github.com/coecomber/Juicedms_Monster
 
 Other than the microservices there is also a websocket server (spring) and a vue.js application. These can be found on the following locations:
-* **Vue frontend:** https://github.com/coecomber/Juicedms_Discovery
+* **Vue frontend:** https://github.com/coecomber/Juicedms_Vue_Frontend
 * **Spring websocket server:** https://github.com/coecomber/Juicedms_WebsocketServer
 
 
